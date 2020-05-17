@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Edit";
+}
+
+@model User
+
+<h3>Edit</h3>
+
+<form action="/User/Edit" method="post">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Tài khoản</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+            @Html.HiddenFor(model => model.id)
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Tài khoản</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.taiKhoan)
+                    @Html.ValidationMessageFor(model => model.taiKhoan)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Mật khẩu</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.matKhau)
+                    @Html.ValidationMessageFor(model => model.matKhau)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Họ tên</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.hoTen)
+                    @Html.ValidationMessageFor(model => model.hoTen)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Tình trạng</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.tinhTrang)
+                    @Html.ValidationMessageFor(model => model.tinhTrang)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Quyền</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.quyen)
+                    @Html.ValidationMessageFor(model => model.quyen)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+</form>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

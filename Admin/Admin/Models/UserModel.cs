@@ -28,5 +28,26 @@ namespace Admin.Models
 
         public DbSet<User> User { set; get; }   // Bảng user trong DataBase, <User> tên lớp
 
+        public User Find(int id)
+        {
+            using (var context = new UsersContext())
+            {
+                User user = new User();
+                foreach (var i in context.User.ToList())
+                {
+                    if (i.id == id)
+                    {
+                        user.id = i.id;
+                        user.taiKhoan = i.taiKhoan;
+                        user.matKhau = i.matKhau;
+                        user.hoTen = i.hoTen;
+                        user.tinhTrang = i.tinhTrang;
+                        user.quyen = i.quyen;
+                        return user;
+                    }
+                }
+            }
+            return null;
+        }
     }
 }

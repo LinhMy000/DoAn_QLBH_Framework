@@ -161,3 +161,4 @@ H:\_FRAMEWORK\DoAn_QLBH_Framework\Admin\Admin\bin\Debug\netcoreapp3.1\System.Web
 H:\_FRAMEWORK\DoAn_QLBH_Framework\Admin\Admin\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
 H:\_FRAMEWORK\DoAn_QLBH_Framework\Admin\Admin\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
 H:\_FRAMEWORK\DoAn_QLBH_Framework\Admin\Admin\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+H:\_FRAMEWORK\DoAn_QLBH_Framework\Admin\Admin\obj\Debug\netcoreapp3.1\Razor\Views\User\Edit.cshtml.g.cs

@@ -17,5 +17,39 @@ namespace Admin.Controllers
                 return View(listUser);
             }
         }
+
+        public ActionResult Edit(int id)
+        {
+            UsersContext context = new UsersContext();
+            User user = context.Find(id);
+            if (user == null)
+            {
+                return View();
+            }
+            return View(user);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(User model)
+        {
+            using (var context = new UsersContext())
+            {
+                //Dùng cú pháp method LINQ
+                var x = context.User.Where(u => u.id == model.id).FirstOrDefault();
+                if (x != null)
+                {
+                    x.taiKhoan = model.taiKhoan;
+                    x.matKhau = model.matKhau;
+                    x.hoTen = model.hoTen;
+                    x.tinhTrang = model.tinhTrang;
+                    x.quyen = model.quyen;
+                    context.SaveChanges();
+                    //return RedirectToRoute(new { controller = "User", action = "Index" });
+                    return RedirectToAction("Index");
+                }
+            }
+            return View();
+        }
     }
 }
