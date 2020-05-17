@@ -9,7 +9,6 @@ H:\_FRAMEWORK\DoAn_QLBH_Framework\DoAnQLBH\DoAnQLBH\bin\Debug\netcoreapp3.1\DoAn
 H:\_FRAMEWORK\DoAn_QLBH_Framework\DoAnQLBH\DoAnQLBH\bin\Debug\netcoreapp3.1\DoAnQLBH.pdb
 H:\_FRAMEWORK\DoAn_QLBH_Framework\DoAnQLBH\DoAnQLBH\bin\Debug\netcoreapp3.1\DoAnQLBH.Views.dll
 H:\_FRAMEWORK\DoAn_QLBH_Framework\DoAnQLBH\DoAnQLBH\bin\Debug\netcoreapp3.1\DoAnQLBH.Views.pdb
-H:\_FRAMEWORK\DoAn_QLBH_Framework\DoAnQLBH\DoAnQLBH\obj\Debug\netcoreapp3.1\DoAnQLBH.csprojAssemblyReference.cache
 H:\_FRAMEWORK\DoAn_QLBH_Framework\DoAnQLBH\DoAnQLBH\obj\Debug\netcoreapp3.1\DoAnQLBH.csproj.CoreCompileInputs.cache
 H:\_FRAMEWORK\DoAn_QLBH_Framework\DoAnQLBH\DoAnQLBH\obj\Debug\netcoreapp3.1\DoAnQLBH.MvcApplicationPartsAssemblyInfo.cache
 H:\_FRAMEWORK\DoAn_QLBH_Framework\DoAnQLBH\DoAnQLBH\obj\Debug\netcoreapp3.1\DoAnQLBH.RazorAssemblyInfo.cache
