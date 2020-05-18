@@ -8,7 +8,7 @@ namespace Admin.Models
 {
     public class User
     {
-        public int id { set; get; }
+        public int? id { set; get; }
         public string taiKhoan { set; get; }
         public string matKhau { set; get; }
         public string hoTen { set; get; }

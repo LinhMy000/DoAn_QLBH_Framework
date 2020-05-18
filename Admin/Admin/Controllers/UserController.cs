@@ -51,5 +51,43 @@ namespace Admin.Controllers
             }
             return View();
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(User model)
+        {
+            using (var context = new UsersContext())
+            {
+                context.User.Add(new User
+                {
+                    id = null,
+                    taiKhoan = model.taiKhoan,
+                    matKhau = model.matKhau,
+                    hoTen = model.hoTen,
+                    tinhTrang = model.tinhTrang,
+                    quyen = model.quyen
+                });
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+        }
+
+        public ActionResult Delete(int id)
+        {
+            UsersContext context = new UsersContext();
+            User user = context.Find(id);
+            if (user != null)
+            {
+                context.Remove(user);
+                context.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
+
     }
 }

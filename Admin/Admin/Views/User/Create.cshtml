@@ -1,19 +1,18 @@
 ﻿@{
-    ViewData["Title"] = "Sửa tài khoản";
+    ViewData["Title"] = "Thêm tài khoản";
 }
 
 @model User
 
-<form action="/User/Edit" method="post">
+<form action="/User/Create" method="post">
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
 
         <div class="form-horizontal">
-            <h4>Sửa tài khoản</h4>
+            <h4>Tạo mới tài khoản</h4>
             <hr />
             @Html.ValidationSummary(true)
-            @Html.HiddenFor(model => model.id)
 
             <div class="form-group">
                 <label class="control-label col-md-2">Tài khoản</label>
@@ -67,3 +66,4 @@
 <div>
     @Html.ActionLink("Quay lại", "Index")
 </div>
+
