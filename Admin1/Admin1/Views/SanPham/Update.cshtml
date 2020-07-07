@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Sửa Sản Phẩm";
+}
+
+<h3>Sản phẩm</h3>
+
+@model SanPham
+
+<form action="/SanPham/Update" method="post">
+    <table>
+        <tr>
+            <td colspan="2">@Html.HiddenFor(model => @Model.masp)</td>
+            @*<td colspan="2"><input type="text" value="@Model.masp" hidden/></td>*@
+        </tr>
+        <tr>
+            <td><label for="tensp">Tên sản phẩm</label></td>
+            <td><input type="text" name="tensp" value="@Model.tensp" /></td>
+        </tr>
+        <tr>
+            <td><label for="loaisp">Loại sản phẩm</label></td>
+            <td><input type="text" name="loaisp" value="@Model.loaisp" /></td>
+        </tr>
+        <tr>
+            <td><label for="thuonghieu">Thương hiệu</label></td>
+            <td><input type="text" name="thuonghieu" value="@Model.thuongHieu" /></td>
+        </tr>
+        <tr>
+            <td><label for="nuocsx">Nước sản xuất</label></td>
+            <td><input type="text" name="nuocsx" value="@Model.nuocsx" /></td>
+        </tr>
+        <tr>
+            <td><label for="kichthuoc">Kích thước</label></td>
+            <td><input type="text" name="kichthuoc" value="@Model.kichThuoc" /></td>
+        </tr>
+        <tr>
+            <td><label for="hinhanh">Hình ảnh</label></td>
+            <td><input type="text" name="hinhanh" value="@Model.hinhAnh" /></td>
+        </tr>
+        <tr>
+            <td><label for="gia">Giá</label></td>
+            <td><input type="text" name="gia" value="@Model.gia" /></td>
+        </tr>
+        <tr>
+            <td><label for="gioitinh">Giới tính</label></td>
+            <td><input type="text" name="gioitinh" value="@Model.gioiTinh" /></td>
+        </tr>
+        <tr>
+            <td><label for="soluong">Số lượng</label></td>
+            <td><input type="text" name="soluong" value="@Model.soLuong" /></td>
+        </tr>
+        <tr>
+            <td><label for="mota">Mô tả</label></td>
+            <td><input type="text" name="mota" value="@Model.moTa" /></td>
+        </tr>
+        <tr>
+            <td><label for="makm">Mã khuyến mãi</label></td>
+            <td>
+                <select name="makm" id="makm">
+                    <option value="@Model.makm">@Model.makm</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><br /></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><input type="submit" name="submit" value="Cập nhật" /></td>
+        </tr>
+    </table>
+</form>
+

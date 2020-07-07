@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Thêm Sản Phẩm";
+}
+
+<h3>Sản phẩm</h3>
+
+@model List<object>
+
+<form action="/SanPham/Insert" method="post">
+    <table>
+        <tr>
+            <td><label for="tensp">Tên sản phẩm</label></td>
+            <td><input type="text" id="tensp" name="tensp" /></td>
+        </tr>
+        <tr>
+            <td><label for="loaisp">Loại sản phẩm</label></td>
+            <td><input type="text" id="loaisp" name="loaisp" /></td>
+        </tr>
+        <tr>
+            <td><label for="thuonghieu">Thương hiệu</label></td>
+            <td><input type="text" id="thuonghieu" name="thuonghieu" /></td>
+        </tr>
+        <tr>
+            <td><label for="nuocsx">Nước sản xuất</label></td>
+            <td><input type="text" id="nuocsx" name="nuocsx" /></td>
+        </tr>
+        <tr>
+            <td><label for="kichthuoc">Kích thước</label></td>
+            <td><input type="text" id="kichthuoc" name="kichthuoc" /></td>
+        </tr>
+        <tr>
+            <td><label for="hinhanh">Hình ảnh</label></td>
+            <td><input type="text" id="hinhanh" name="hinhanh" /></td>
+        </tr>
+        <tr>
+            <td><label for="gia">Giá</label></td>
+            <td><input type="text" id="gia" name="gia"/></td>
+        </tr>
+        <tr>
+            <td><label for="gioitinh">Giới tính</label></td>
+            <td><input type="text" id="gioitinh" name="gioitinh" /></td>
+        </tr>
+        <tr>
+            <td><label for="soluong">Số lượng</label></td>
+            <td><input type="text" id="soluong" name="soluong" /></td>
+        </tr>
+        <tr>
+            <td><label for="mota">Mô tả</label></td>
+            <td><input type="text" id="mota" name="mota" /></td>
+        </tr>
+        <tr>
+            <td><label for="makm">Phần trăm khuyến mãi</label></td>
+            <td>
+                <select name="makm" id="makm">
+                    @foreach (var item in Model)
+                    {
+                        <option value="@item.GetType().GetProperty("makm").GetValue(item,null)">
+                            @item.GetType().GetProperty("phantram").GetValue(item, null)%
+                        </option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><br /></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><input type="submit" id="submit" value="Thêm" /></td>
+        </tr>
+    </table>
+</form>
+

@@ -34,3 +34,4 @@ H:\_FRAMEWORK\DoAn_QLBH_Framework\DoAnQLBH\DoAnQLBH\obj\Debug\netcoreapp3.1\DoAn
 H:\_FRAMEWORK\DoAn_QLBH_Framework\DoAnQLBH\DoAnQLBH\obj\Debug\netcoreapp3.1\DoAnQLBH.pdb
 H:\_FRAMEWORK\DoAn_QLBH_Framework\DoAnQLBH\DoAnQLBH\obj\Debug\netcoreapp3.1\DoAnQLBH.genruntimeconfig.cache
 H:\_FRAMEWORK\DoAn_QLBH_Framework\DoAnQLBH\DoAnQLBH\obj\Debug\netcoreapp3.1\DoAnQLBH.csproj.CopyComplete
+H:\_FRAMEWORK\DoAn_QLBH_Framework\DoAnQLBH\DoAnQLBH\obj\Debug\netcoreapp3.1\DoAnQLBH.csprojAssemblyReference.cache

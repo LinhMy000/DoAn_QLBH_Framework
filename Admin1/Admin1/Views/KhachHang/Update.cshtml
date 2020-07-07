@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Sửa Khách Hàng";
+}
+
+<h3>Khách hàng</h3>
+
+@model KhachHang
+
+<form action="/KhachHang/Update" method="post">
+    <table>
+        <tr>
+            <td colspan="2">@Html.HiddenFor(model => model.makh)</td>
+            @*<td colspan="2"><input type="text" value="@Model.makh" hidden /></td>*@
+        </tr>
+        <tr>
+            <td><label>Họ tên</label></td>
+            <td>@Html.EditorFor(model => model.hoten)</td>
+        </tr>
+        <tr>
+            <td><label>Địa chỉ</label></td>
+            <td>@Html.EditorFor(model => model.dchi)</td>
+        </tr>
+        <tr>
+            <td><label>Số điện thoại</label></td>
+            <td>@Html.EditorFor(model => model.sodt)</td>
+        </tr>
+        <tr>
+            <td><label>Ngày sinh</label></td>
+            <td>@Html.EditorFor(model => model.ngsinh)</td>
+        </tr>
+        <tr>
+            <td><label>Ngày đăng ký</label></td>
+            <td>@Html.EditorFor(model => model.ngdk)</td>
+        </tr>
+        <tr>
+            <td><label>Doanh số</label></td>
+            <td>@Html.EditorFor(model => model.doanhso)</td>
+        </tr>
+        <tr>
+            <td><label>Username</label></td>
+            <td>@Html.EditorFor(model => model.username)</td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td>@Html.EditorFor(model => model.password)</td>
+        </tr>
+        <tr>
+            <td><label>Loại tài khoản</label></td>
+            <td>@Html.EditorFor(model => model.loaitk)</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><br /></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><input type="submit" id="submit" value="Cập nhật" /></td>
+        </tr>
+    </table>
+</form>

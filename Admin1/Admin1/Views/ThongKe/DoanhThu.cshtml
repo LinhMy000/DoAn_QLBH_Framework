@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Doanh Thu";
+}
+
+<h3>Thống kê doanh thu theo tháng</h3>
+
+@model List<object>
+
+    <table class="table">
+        <tr>
+            <th>Tháng trong năm 2020</th>
+            <th>Doanh thu</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.GetType().GetProperty("thang").GetValue(item, null)</td>
+                <td>@item.GetType().GetProperty("doanhthu").GetValue(item, null)</td>
+            </tr>
+        }
+    </table>
+
+@Html.ActionLink("Quay lại", "Index")
+

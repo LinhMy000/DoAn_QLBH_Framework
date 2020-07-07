@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OeGXaWnJzdDUTIjcTngHl+GelCMshdHb9+cVZlN0bElQPu8ZZoh3f3o/C4p1i3CVDoBjRVSVOdOhZ6akq6IoZg==",
+  "dgSpecHash": "G21zWwpvsuOcpiXH/rIQaihV9N98h/MDdcKjHabOnuTrdrBNbDtCkSsSiaTcvVv7Qx76SVXw0MSOGLg2MYVRlA==",
   "success": true,
   "projectFilePath": "H:\\_FRAMEWORK\\DoAn_QLBH_Framework\\DoAnQLBH\\DoAnQLBH\\DoAnQLBH.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
   "logs": []
 }

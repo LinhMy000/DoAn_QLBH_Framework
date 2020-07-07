@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Top Sản Phẩm";
+}
+
+<h3>Top 10 sản phẩm bán chạy nhất</h3>
+
+@model List<object>
+
+<table class="table">
+    <tr>
+        <th>STT</th>
+        <th>Sản phẩm</th>
+        <th>Số lượng đã bán</th>
+    </tr>
+
+    @{ 
+        int i = 0;
+    } 
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@i++</td>
+            <td>@item.GetType().GetProperty("sp").GetValue(item, null)</td>
+            <td>@item.GetType().GetProperty("sl").GetValue(item, null)</td>
+        </tr>
+    }
+</table>
+
+@Html.ActionLink("Quay lại", "Index")

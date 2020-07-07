@@ -26,12 +26,11 @@ namespace Admin.Controllers
         public IActionResult TaiKhoan()
         {
             return RedirectToRoute(new { controller = "User", action = "Index" });
-            //return View();
         }
 
         public IActionResult Sanpham()
         {
-            return View();
+            return RedirectToRoute(new { controller = "SanPham", action = "Index" });
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

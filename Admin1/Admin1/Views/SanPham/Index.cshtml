@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Sản Phẩm";
+}
+
+<h5>@Html.ActionLink("Thêm sản phẩm mới", "Insert")</h5>
+
+@model List<SanPham>
+
+<table class="table">
+    <tr>
+        <th>Mã sản phẩm</th>
+        <th>Tên sản phẩm</th>
+        <th>Loại sản phẩm</th>
+        <th>Thương hiệu</th>
+        <th>Nước sản xuất</th>
+        <th>Kích thước</th>
+        <th>Hình ảnh</th>
+        <th>Giá</th>
+        <th>Giới tính</th>
+        <th>Số lượng</th>
+        <th>Mô tả</th>
+        <th>Mã khuyến mãi</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.masp</td>
+            <td>@item.tensp</td>
+            <td>@item.loaisp</td>
+            <td>@item.thuongHieu</td>
+            <td>@item.nuocsx</td>
+            <td>@item.kichThuoc</td>
+            <td>@item.hinhAnh</td>
+            <td>@item.gia</td>
+            <td>@item.gioiTinh</td>
+            <td>@item.soLuong</td>
+            <td>@item.moTa</td>
+            <td>@item.makm</td>
+            <td>
+                @*<a href="Update?id=@item.masp">Sửa</a>
+                <a href="Delete?id=@item.masp">Xóa</a>*@
+                @Html.ActionLink("Sửa", "Update", new { id = item.masp })
+                @Html.ActionLink("Xóa", "Delete", new { id = item.masp })
+            </td>
+        </tr>
+    }
+</table>
