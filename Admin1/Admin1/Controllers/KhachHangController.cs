@@ -24,6 +24,18 @@ namespace Admin1.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult Them()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Them(KhachHang kh)
+        {
+            KhachHangContext.InsertTaiKhoan(kh);
+            return RedirectToAction("Index");
+        }
+
         public IActionResult Update(int id)
         {
             KhachHang kh = KhachHangContext.FindKhachHang(id);

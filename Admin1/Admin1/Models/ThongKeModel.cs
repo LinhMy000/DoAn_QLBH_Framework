@@ -66,5 +66,24 @@ namespace Admin1.Models
             con.Close();
             return list;
         }
+
+        public static List<object> KhachHang()
+        {
+            con.Open();
+            List<object> list = new List<object>();
+            string sql = "SELECT h.makh, hoten, sohd, nghd, trigia, tinhtrang, thanhtoan from hoadon h, khachhang k where h.makh=k.makh group by h.makh;";
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            using (var reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    var ob = new { hoten = reader[1].ToString(), sohd = reader.GetInt16(2), nghd = reader.GetDateTime(3), trigia = reader.GetDouble(4), tinhtrang = reader[5].ToString(), thanhtoan = reader.GetInt16(6) };
+                    list.Add(ob);
+                }
+                reader.Close();
+            }
+            con.Close();
+            return list;
+        }
     }
 }

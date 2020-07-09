@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Thống Kê Khách Hàng";
+}
+
+<h3>Hóa đơn của khách hàng</h3>
+
+@model List<object>
+
+<table class="table">
+    <tr>
+        <th>Khách hàng</th>
+        <th>Số HD</th>
+        <th>Ngày HD</th>
+        <th>Trị giá</th>
+        <th>Tình trạng</th>
+        <th>Thanh toán</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.GetType().GetProperty("hoten").GetValue(item, null)</td>
+            <td>@item.GetType().GetProperty("sohd").GetValue(item, null)</td>
+            <td>@item.GetType().GetProperty("nghd").GetValue(item, null)</td>
+            <td>@item.GetType().GetProperty("trigia").GetValue(item, null)</td>
+            <td>@item.GetType().GetProperty("tinhtrang").GetValue(item, null)</td>
+            <td>@item.GetType().GetProperty("thanhtoan").GetValue(item, null)</td>
+        </tr>
+    }
+</table>
+
+@Html.ActionLink("Quay lại", "Index")

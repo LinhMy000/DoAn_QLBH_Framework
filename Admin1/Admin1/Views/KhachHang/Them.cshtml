@@ -1,20 +1,15 @@
 ﻿@model Admin1.Models.KhachHang
 
 @{
-    ViewData["Title"] = "Sửa Khách Hàng";
+    ViewData["Title"] = "Thêm Khách Hàng";
 }
 
-<h3>Khách hàng</h3>
+<h4>Khách hàng</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Update">
+        <form asp-action="Them">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="makh" class="control-label">Mã KH</label>
-                <input asp-for="makh" class="form-control" readonly/>
-                <span asp-validation-for="makh" class="text-danger"></span>
-            </div>
             <div class="form-group">
                 <label asp-for="hoten" class="control-label">Họ tên</label>
                 <input asp-for="hoten" class="form-control" />
@@ -41,11 +36,6 @@
                 <span asp-validation-for="ngdk" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="doanhso" class="control-label">Doanh số</label>
-                <input asp-for="doanhso" class="form-control" />
-                <span asp-validation-for="doanhso" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="username" class="control-label">Username</label>
                 <input asp-for="username" class="form-control" />
                 <span asp-validation-for="username" class="text-danger"></span>
@@ -61,7 +51,7 @@
                 <span asp-validation-for="loaitk" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Cập nhật" class="btn btn-primary" />
+                <input type="submit" value="Thêm" class="btn btn-primary" />
             </div>
         </form>
     </div>

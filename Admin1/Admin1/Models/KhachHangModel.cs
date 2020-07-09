@@ -74,14 +74,14 @@ namespace Admin1.Models
         public static int InsertKhachHang(KhachHang kh)
         {
             con.Open();
-            string sql = "insert into khachhang values(null, @hoten, @dchi, @sodt, @ngsinh, @ngdk, @doanhso, null)";
+            string sql = "insert into khachhang values(null, @hoten, @dchi, @sodt, @ngsinh, @ngdk, 0, null)";
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.Parameters.AddWithValue("hoten", kh.hoten);
             cmd.Parameters.AddWithValue("dchi", kh.dchi);
             cmd.Parameters.AddWithValue("sodt", kh.sodt);
             cmd.Parameters.AddWithValue("ngsinh", kh.ngsinh);
             cmd.Parameters.AddWithValue("ngdk", kh.ngdk);
-            cmd.Parameters.AddWithValue("doanhso", kh.doanhso);
+            //cmd.Parameters.AddWithValue("doanhso", kh.doanhso);
             int row = cmd.ExecuteNonQuery();
             con.Close();
             return row;

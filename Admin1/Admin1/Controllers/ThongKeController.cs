@@ -38,5 +38,11 @@ namespace Admin1.Controllers
             List<object> list = ThongKeModel.TopKhachHang();
             return View(list);
         }
+
+        public IActionResult KhachHang()
+        {
+            List<object> list = ThongKeModel.KhachHang();
+            return View(list);
+        }
     }
 }
