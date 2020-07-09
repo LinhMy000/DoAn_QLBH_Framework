@@ -40,7 +40,7 @@
             <td>@item.makm</td>
             <td>
                 @*<a href="Update?id=@item.masp">Sửa</a>
-                <a href="Delete?id=@item.masp">Xóa</a>*@
+                    <a href="Delete?id=@item.masp">Xóa</a>*@
                 @Html.ActionLink("Sửa", "Update", new { id = item.masp })
                 @Html.ActionLink("Xóa", "Delete", new { id = item.masp })
             </td>
