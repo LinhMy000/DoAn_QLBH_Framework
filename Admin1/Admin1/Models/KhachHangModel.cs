@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Admin1.Models
 {
@@ -39,7 +40,10 @@ namespace Admin1.Models
 
         public static List<KhachHang> GetKhachHangs()
         {
-            con.Open();
+            if (con.State != ConnectionState.Open)
+            {
+                con.Open();
+            }
             List<KhachHang> list = new List<KhachHang>();
             KhachHang kh;
             string sql = "select * from khachhang k, taikhoan t where k.makh=t.makh";
@@ -56,9 +60,9 @@ namespace Admin1.Models
                     kh.ngsinh = reader.GetDateTime(4);
                     kh.ngdk = reader.GetDateTime(5);
                     kh.doanhso = reader.GetDouble(6);
-                    kh.username = reader[7].ToString();
-                    kh.password = reader[8].ToString();
-                    kh.loaitk = reader.GetInt16(9);
+                    kh.username = reader[8].ToString();
+                    kh.password = reader[9].ToString();
+                    kh.loaitk = reader.GetInt16(10);
                     list.Add(kh);
                 }
                 reader.Close();
@@ -70,7 +74,7 @@ namespace Admin1.Models
         public static int InsertKhachHang(KhachHang kh)
         {
             con.Open();
-            string sql = "insert into khachhang values(null, @hoten, @dchi, @sodt, @ngsinh, @ngdk, @doanhso)";
+            string sql = "insert into khachhang values(null, @hoten, @dchi, @sodt, @ngsinh, @ngdk, @doanhso, null)";
             MySqlCommand cmd = new MySqlCommand(sql, con);
             cmd.Parameters.AddWithValue("hoten", kh.hoten);
             cmd.Parameters.AddWithValue("dchi", kh.dchi);
@@ -163,9 +167,9 @@ namespace Admin1.Models
                 kh.ngsinh = reader.GetDateTime(4);
                 kh.ngdk = reader.GetDateTime(5);
                 kh.doanhso = reader.GetDouble(6);
-                kh.username = reader.GetString(7);
-                kh.password = reader.GetString(8);
-                kh.loaitk = reader.GetInt16(9);
+                kh.username = reader.GetString(8);
+                kh.password = reader.GetString(9);
+                kh.loaitk = reader.GetInt16(10);
                 reader.Close();
             }
             con.Close();

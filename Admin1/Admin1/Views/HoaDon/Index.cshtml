@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Admin1.Models.HoaDon>
+
+@{
+    ViewData["Title"] = "Hóa Đơn";
+}
+
+<h3>Hóa đơn</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Số HD</th>
+            <th>Ngày HD</th>
+            <th>Mã KH</th>
+            <th>Trị giá</th>
+            <th>Tình trạng</th>
+            <th>Thanh toán</th>
+            <th>Ghi chú</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.sohd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ngahd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.makh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trigia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tinhtrang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.thanhtoan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ghichu)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Update", new { id = item.sohd }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.sohd })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

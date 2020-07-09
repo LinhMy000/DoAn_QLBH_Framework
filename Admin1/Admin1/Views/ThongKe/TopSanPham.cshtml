@@ -18,8 +18,9 @@
     } 
     @foreach (var item in Model)
     {
+        i++;
         <tr>
-            <td>@i++</td>
+            <td>@i</td>
             <td>@item.GetType().GetProperty("sp").GetValue(item, null)</td>
             <td>@item.GetType().GetProperty("sl").GetValue(item, null)</td>
         </tr>

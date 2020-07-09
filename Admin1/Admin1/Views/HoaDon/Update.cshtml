@@ -1,0 +1,59 @@
+﻿@model Admin1.Models.HoaDon
+
+@{
+    ViewData["Title"] = "Sửa Hóa Đơn";
+}
+
+<h3>Hóa đơn</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Update">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="sohd" class="control-label">Số HD</label>
+                <input asp-for="sohd" class="form-control" readonly />
+                <span asp-validation-for="sohd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ngahd" class="control-label">Ngày HD</label>
+                <input asp-for="ngahd" class="form-control" readonly />
+                <span asp-validation-for="ngahd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="makh" class="control-label">Mã KH</label>
+                <input asp-for="makh" class="form-control" readonly />
+                <span asp-validation-for="makh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="trigia" class="control-label">Trị giá</label>
+                <input asp-for="trigia" class="form-control" />
+                <span asp-validation-for="trigia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tinhtrang" class="control-label">Tình trạng</label>
+                <input asp-for="tinhtrang" class="form-control" />
+                <span asp-validation-for="tinhtrang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="thanhtoan" class="control-label">Thanh toán</label>
+                <input asp-for="thanhtoan" class="form-control" />
+                <span asp-validation-for="thanhtoan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ghichu" class="control-label">Ghi chú</label>
+                <input asp-for="ghichu" class="form-control" />
+                <span asp-validation-for="ghichu" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Cập nhật" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Quay lại</a>
+</div>
+

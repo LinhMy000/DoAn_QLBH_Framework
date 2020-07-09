@@ -132,3 +132,5 @@ H:\_FRAMEWORK\DoAn_QLBH_Framework\Admin1\Admin1\obj\Debug\netcoreapp3.1\Razor\Vi
 H:\_FRAMEWORK\DoAn_QLBH_Framework\Admin1\Admin1\obj\Debug\netcoreapp3.1\Razor\Views\ThongKe\DoanhThu.cshtml.g.cs
 H:\_FRAMEWORK\DoAn_QLBH_Framework\Admin1\Admin1\obj\Debug\netcoreapp3.1\Razor\Views\ThongKe\TopSanPham.cshtml.g.cs
 H:\_FRAMEWORK\DoAn_QLBH_Framework\Admin1\Admin1\obj\Debug\netcoreapp3.1\Razor\Views\ThongKe\TopKhachHang.cshtml.g.cs
+H:\_FRAMEWORK\DoAn_QLBH_Framework\Admin1\Admin1\obj\Debug\netcoreapp3.1\Razor\Views\HoaDon\Index.cshtml.g.cs
+H:\_FRAMEWORK\DoAn_QLBH_Framework\Admin1\Admin1\obj\Debug\netcoreapp3.1\Razor\Views\HoaDon\Update.cshtml.g.cs
